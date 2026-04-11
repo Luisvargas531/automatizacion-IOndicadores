@@ -1,0 +1,40 @@
+2026-04-10 20:19:37 | INFO     | Logger iniciado. Archivo de log: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\logs\proceso_20260410_201937.log
+2026-04-10 20:19:37 | INFO     | Rutas seleccionadas:
+2026-04-10 20:19:37 | INFO     |   Maestro        : C:\Users\lvarg\OneDrive\Escritorio\Proyecto\Maestro.xlsx
+2026-04-10 20:19:37 | INFO     |   Individuales   : C:\Users\lvarg\OneDrive\Escritorio\Proyecto\Indicadores
+2026-04-10 20:19:37 | INFO     |   Salida         : C:\Users\lvarg\OneDrive\Escritorio\Maestro_actualizado.xlsx
+2026-04-10 20:19:37 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:19:37 | INFO     | PASO 1: Cargando el maestro...
+2026-04-10 20:19:37 | INFO     | Leyendo maestro: Maestro.xlsx
+2026-04-10 20:19:37 | INFO     |   → 1231 registros cargados del maestro.
+2026-04-10 20:19:37 | INFO     |   → Maestro validado correctamente.
+2026-04-10 20:19:37 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:19:37 | INFO     | PASO 2: Creando backup del maestro...
+2026-04-10 20:19:37 | INFO     |   → Backup creado: Maestro_backup_20260410_201937.xlsx
+2026-04-10 20:19:37 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:19:37 | INFO     | PASO 3: Buscando archivos individuales...
+2026-04-10 20:19:37 | INFO     |   → 1 archivo(s) encontrado(s).
+2026-04-10 20:19:37 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:19:37 | INFO     | PASO 4: Procesando archivos individuales...
+2026-04-10 20:19:37 | INFO     | 
+  Procesando: INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx
+2026-04-10 20:19:37 | ERROR    |   [ERROR FECHA] Celda H2 vacía en: INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx
+2026-04-10 20:19:37 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:19:37 | INFO     | PASO 5: Guardando maestro actualizado...
+2026-04-10 20:19:37 | INFO     |   → Maestro actualizado guardado en: C:\Users\lvarg\OneDrive\Escritorio\Maestro_actualizado.xlsx
+2026-04-10 20:19:37 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:19:37 | INFO     | RESUMEN FINAL:
+2026-04-10 20:19:37 | INFO     |   Archivos procesados  : 0
+2026-04-10 20:19:37 | INFO     |   Registros actualizados: 0
+2026-04-10 20:19:37 | INFO     |   No encontrados       : 0
+2026-04-10 20:19:37 | INFO     |   Ambiguos             : 0
+2026-04-10 20:19:37 | INFO     |   Dup. en maestro      : 0
+2026-04-10 20:19:37 | INFO     |   Dup. en individuales : 0
+2026-04-10 20:19:37 | INFO     |   Errores de fecha     : 1
+2026-04-10 20:19:37 | INFO     |   Errores generales    : 0
+2026-04-10 20:19:37 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:19:37 | INFO     | PASO 6: Generando reporte final...
+2026-04-10 20:19:37 | INFO     | Reporte generado: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\reports\Reporte_Indicadores_20260410_201937.xlsx
+2026-04-10 20:19:37 | INFO     |   → Reporte disponible en: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\reports\Reporte_Indicadores_20260410_201937.xlsx
+2026-04-10 20:19:37 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:19:37 | INFO     | Proceso finalizado.

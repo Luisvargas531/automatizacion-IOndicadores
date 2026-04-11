@@ -1,0 +1,53 @@
+2026-04-10 20:41:57 | INFO     | Logger iniciado. Archivo de log: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\logs\proceso_20260410_204157.log
+2026-04-10 20:41:57 | INFO     | Rutas seleccionadas:
+2026-04-10 20:41:57 | INFO     |   Maestro        : C:\Users\lvarg\OneDrive\Escritorio\Proyecto\Maestro.xlsx
+2026-04-10 20:41:57 | INFO     |   Individuales   : C:\Users\lvarg\OneDrive\Escritorio\Proyecto\Indicadores
+2026-04-10 20:41:57 | INFO     |   Salida         : C:\Users\lvarg\OneDrive\Escritorio\Maestro_actualizado.xlsx
+2026-04-10 20:41:57 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:41:57 | INFO     | PASO 1: Cargando el maestro...
+2026-04-10 20:41:57 | INFO     | Leyendo maestro: Maestro.xlsx
+2026-04-10 20:41:57 | INFO     |   → 1231 registros cargados del maestro.
+2026-04-10 20:41:57 | INFO     |   → Maestro validado correctamente.
+2026-04-10 20:41:57 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:41:57 | INFO     | PASO 2: Creando backup del maestro...
+2026-04-10 20:41:57 | INFO     |   → Backup creado: Maestro_backup_20260410_204157.xlsx
+2026-04-10 20:41:57 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:41:57 | INFO     | PASO 3: Buscando archivos individuales...
+2026-04-10 20:41:57 | INFO     |   → 1 archivo(s) encontrado(s).
+2026-04-10 20:41:57 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:41:57 | INFO     | PASO 4: Procesando archivos individuales...
+2026-04-10 20:41:57 | INFO     | 
+  Procesando: INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx
+2026-04-10 20:41:57 | INFO     |   [DIAG] Volcado de celdas (primeras 5 filas):
+2026-04-10 20:41:57 | INFO     |     A1: 'PLANTILLA MENSUAL DE EJECUCIÓN — ANALISIS CUANTITATIVO' (str)
+2026-04-10 20:41:57 | INFO     |     A2: 'Período: 03/2026  ·  3 indicadores  ·  Solo diligencie la columna EJECUCIÓN' (str)
+2026-04-10 20:41:57 | INFO     |     A4: '¿QUÉ DEBE HACER?' (str)
+2026-04-10 20:41:57 | INFO     |     A5: "1. Vaya a la pestaña '📊 Ejecución Mensual' en la parte inferior." (str)
+2026-04-10 20:41:57 | WARNING  |   [FECHA] H2 vacía o inválida (None). Buscando en hoja...
+2026-04-10 20:41:57 | WARNING  |   [FECHA] Extraída del nombre 'INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx': 2026-03-01 (día 1 del periodo)
+2026-04-10 20:41:57 | INFO     |   Fecha H2: 2026-03-01 | Periodo: 202603
+2026-04-10 20:41:57 | DEBUG    | Leyendo datos de individual: INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx
+2026-04-10 20:41:57 | WARNING  |   [ENCABEZADO] No se detectó fila de encabezado automáticamente. Usando fila 1 (config INDIVIDUAL_HEADER_ROW).
+2026-04-10 20:41:57 | INFO     |   Columnas encontradas: ['PLANTILLA MENSUAL DE EJECUCIÓN — ANALISIS CUANTITATIVO']
+2026-04-10 20:41:57 | INFO     |   → 12 registros leídos.
+2026-04-10 20:41:57 | WARNING  |   Columnas requeridas no encontradas en 'INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx': ['Equipo', 'Indicador', 'Ejecucion']. Columnas disponibles: ['PLANTILLA MENSUAL DE EJECUCIÓN — ANALISIS CUANTITATIVO']
+2026-04-10 20:41:57 | ERROR    |   [ERROR COLUMNAS] Columnas faltantes en 'INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx': ['Equipo', 'Indicador', 'Ejecucion']
+2026-04-10 20:41:57 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:41:57 | INFO     | PASO 5: Guardando maestro actualizado...
+2026-04-10 20:41:57 | INFO     |   → Maestro actualizado guardado en: C:\Users\lvarg\OneDrive\Escritorio\Maestro_actualizado.xlsx
+2026-04-10 20:41:57 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:41:57 | INFO     | RESUMEN FINAL:
+2026-04-10 20:41:57 | INFO     |   Archivos procesados  : 0
+2026-04-10 20:41:57 | INFO     |   Registros actualizados: 0
+2026-04-10 20:41:57 | INFO     |   No encontrados       : 0
+2026-04-10 20:41:57 | INFO     |   Ambiguos             : 0
+2026-04-10 20:41:57 | INFO     |   Dup. en maestro      : 0
+2026-04-10 20:41:57 | INFO     |   Dup. en individuales : 0
+2026-04-10 20:41:57 | INFO     |   Errores de fecha     : 0
+2026-04-10 20:41:57 | INFO     |   Errores generales    : 1
+2026-04-10 20:41:57 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:41:57 | INFO     | PASO 6: Generando reporte final...
+2026-04-10 20:41:57 | INFO     | Reporte generado: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\reports\Reporte_Indicadores_20260410_204157.xlsx
+2026-04-10 20:41:57 | INFO     |   → Reporte disponible en: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\reports\Reporte_Indicadores_20260410_204157.xlsx
+2026-04-10 20:41:57 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:41:57 | INFO     | Proceso finalizado.

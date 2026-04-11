@@ -1,0 +1,4 @@
+2026-04-10 20:11:46 | INFO     | Logger iniciado. Archivo de log: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\logs\proceso_20260410_201146.log
+2026-04-10 20:11:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:11:46 | INFO     | PASO 1: Cargando el maestro...
+2026-04-10 20:11:46 | ERROR    | Error crítico al leer el maestro: Maestro no encontrado: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\data\Maestro.xlsx

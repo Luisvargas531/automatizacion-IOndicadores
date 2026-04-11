@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m py_compile config.py normalization.py logger_utils.py excel_reader.py matcher.py updater.py reporting.py main.py)",
+      "Bash(python -m py_compile file_selector.py main.py)",
+      "Bash(python -m py_compile excel_reader.py)",
+      "Bash(python -m py_compile matcher.py)",
+      "Bash(python -m py_compile excel_reader.py matcher.py config.py)",
+      "Bash(python -m py_compile excel_reader.py main.py matcher.py)",
+      "Bash(python -m py_compile excel_reader.py main.py)",
+      "Bash(python -m py_compile main.py)",
+      "Bash(python -m py_compile updater.py main.py)"
+    ]
+  }
+}

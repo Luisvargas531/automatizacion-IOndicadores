@@ -1,0 +1,8 @@
+2026-04-10 20:16:51 | INFO     | Logger iniciado. Archivo de log: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\logs\proceso_20260410_201651.log
+2026-04-10 20:16:51 | INFO     | Rutas seleccionadas:
+2026-04-10 20:16:51 | INFO     |   Maestro        : C:\Users\lvarg\OneDrive\Escritorio\Proyecto\Maestro.xlsx
+2026-04-10 20:16:51 | INFO     |   Individuales   : C:\Users\lvarg\OneDrive\Escritorio\Proyecto\Indicadores
+2026-04-10 20:16:51 | INFO     |   Salida         : C:\Users\lvarg\OneDrive\Escritorio\Maestro_actualizado.xlsx
+2026-04-10 20:16:51 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:16:51 | INFO     | PASO 1: Cargando el maestro...
+2026-04-10 20:16:51 | INFO     | Leyendo maestro: Maestro.xlsx

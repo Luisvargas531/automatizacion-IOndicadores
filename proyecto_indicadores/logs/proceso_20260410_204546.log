@@ -1,0 +1,105 @@
+2026-04-10 20:45:46 | INFO     | Logger iniciado. Archivo de log: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\logs\proceso_20260410_204546.log
+2026-04-10 20:45:46 | INFO     | Rutas seleccionadas:
+2026-04-10 20:45:46 | INFO     |   Maestro        : C:\Users\lvarg\OneDrive\Escritorio\Proyecto\Maestro.xlsx
+2026-04-10 20:45:46 | INFO     |   Individuales   : C:\Users\lvarg\OneDrive\Escritorio\Proyecto\Indicadores
+2026-04-10 20:45:46 | INFO     |   Salida         : C:\Users\lvarg\OneDrive\Escritorio\Maestro_actualizado.xlsx
+2026-04-10 20:45:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:45:46 | INFO     | PASO 1: Cargando el maestro...
+2026-04-10 20:45:46 | INFO     | Leyendo maestro: Maestro.xlsx
+2026-04-10 20:45:46 | INFO     |   → 1231 registros cargados del maestro.
+2026-04-10 20:45:46 | INFO     |   → Maestro validado correctamente.
+2026-04-10 20:45:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:45:46 | INFO     | PASO 2: Creando backup del maestro...
+2026-04-10 20:45:46 | INFO     |   → Backup creado: Maestro_backup_20260410_204546.xlsx
+2026-04-10 20:45:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:45:46 | INFO     | PASO 3: Buscando archivos individuales...
+2026-04-10 20:45:46 | INFO     |   → 1 archivo(s) encontrado(s).
+2026-04-10 20:45:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:45:46 | INFO     | PASO 4: Procesando archivos individuales...
+2026-04-10 20:45:46 | INFO     | 
+  Procesando: INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx
+2026-04-10 20:45:46 | INFO     |   [DIAG] Hojas en el archivo: ['Instrucciones', '📊 Ejecución Mensual', '📚 Mis Indicadores']
+2026-04-10 20:45:46 | INFO     |     [Instrucciones] A1: 'PLANTILLA MENSUAL DE EJECUCIÓN — ANALISIS CUANTITATIVO' (str)
+2026-04-10 20:45:46 | INFO     |     [Instrucciones] A2: 'Período: 03/2026  ·  3 indicadores  ·  Solo diligencie la columna EJECUCIÓN' (str)
+2026-04-10 20:45:46 | INFO     |     [Instrucciones] A4: '¿QUÉ DEBE HACER?' (str)
+2026-04-10 20:45:46 | INFO     |     [Instrucciones] A5: "1. Vaya a la pestaña '📊 Ejecución Mensual' en la parte inferior." (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] A1: 'EJECUCIÓN DE INDICADORES — ANALISIS CUANTITATIVO — 04/2026' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] A2: 'Equipo:' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] B2: 'Analisis cuantitativo' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] C2: 'Período:' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] D2: '202603' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] E2: 'Responsable:' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] F2: 'Luis vargas' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] G2: 'Fecha de diligenciamiento:' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] H2: datetime.datetime(2026, 4, 10, 0, 0) (datetime)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] A4: 'Equipo' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] B4: 'Período' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] C4: 'Indicador' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] D4: 'Unidad' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] E4: 'Periodicidad' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] F4: 'Ejecución *' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] A5: 'Analisis cuantitativo' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] B5: '202603' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] C5: 'Performance MAN' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] D5: '% Porcentaje' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] E5: 'Mensual' (str)
+2026-04-10 20:45:46 | INFO     |     [📊 Ejecución Mensual] F5: 50 (int)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] A1: 'Lista de indicadores — Analisis cuantitativo  (3 indicadores)' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] A2: 'Indicador' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] B2: 'Unidad' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] C2: 'Periodicidad' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] A3: 'Performance MAN' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] B3: '% Porcentaje' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] C3: 'Mensual' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] A4: 'Performance INV' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] B4: '% Porcentaje' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] C4: 'Mensual' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] A5: 'Performance MAV' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] B5: '% Porcentaje' (str)
+2026-04-10 20:45:46 | INFO     |     [📚 Mis Indicadores] C5: 'Mensual' (str)
+2026-04-10 20:45:46 | WARNING  |   [FECHA] H2 vacía o inválida (None). Buscando en hoja...
+2026-04-10 20:45:46 | WARNING  |   [FECHA] Extraída del texto 'Período: 03/2026  ·  3 indicadores  ·  Solo diligencie la columna EJECUCIÓN' en [Instrucciones]A2: 2026-03-01
+2026-04-10 20:45:46 | INFO     |   Fecha H2: 2026-03-01 | Periodo: 202603
+2026-04-10 20:45:46 | DEBUG    | Leyendo datos de individual: INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx
+2026-04-10 20:45:46 | INFO     |   [HOJA] 'Instrucciones' → score=0 (fila candidata: 1)
+2026-04-10 20:45:46 | INFO     |   [HOJA] '📊 Ejecución Mensual' → score=3 (fila candidata: 4)
+2026-04-10 20:45:46 | INFO     |   [HOJA] '📚 Mis Indicadores' → score=1 (fila candidata: 2)
+2026-04-10 20:45:46 | INFO     |   [HOJA] Seleccionada: '📊 Ejecución Mensual' | Encabezado en fila 4 | Score=3
+2026-04-10 20:45:46 | INFO     |   [COLUMNA] Renombrada: 'Ejecución *' → 'Ejecucion'
+2026-04-10 20:45:46 | INFO     |   Columnas encontradas: ['Equipo', 'Período', 'Indicador', 'Unidad', 'Periodicidad', 'Ejecucion']
+2026-04-10 20:45:46 | INFO     |   → 4 registros leídos.
+2026-04-10 20:45:46 | WARNING  |   [LLAVE] Columnas de llave ausentes en 'INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx': ['Clave']. Se usará llave reducida: ['Equipo', 'Indicador']. ATENCIÓN: mayor riesgo de ambigüedad.
+2026-04-10 20:45:46 | WARNING  |   [DUPLICADO] 1230 filas con llave duplicada en 'Maestro'
+2026-04-10 20:45:46 | INFO     |   [DIAG] Columnas del individual: ['Equipo', 'Período', 'Indicador', 'Unidad', 'Periodicidad', 'Ejecucion']
+2026-04-10 20:45:46 | INFO     |   [DIAG] Filas en individual: 4
+2026-04-10 20:45:46 | INFO     |   [DIAG] Filas en maestro: 1231
+2026-04-10 20:45:46 | INFO     |   [DIAG] Individual fila 2 | original=('Analisis cuantitativo', 'Performance MAN') | normalizado=('analisis cuantitativo', 'performance man')
+2026-04-10 20:45:46 | INFO     |   [DIAG] Individual fila 3 | original=('Analisis cuantitativo', 'Performance INV') | normalizado=('analisis cuantitativo', 'performance inv')
+2026-04-10 20:45:46 | INFO     |   [DIAG] Individual fila 4 | original=('Analisis cuantitativo', 'Performance MAV') | normalizado=('analisis cuantitativo', 'performance mav')
+2026-04-10 20:45:46 | INFO     |   [DIAG] Maestro    fila 2 | original=('Planeacion financiera', 'Ingresos Netos (MM)') | normalizado=('planeacion financiera', 'ingresos netos (mm)')
+2026-04-10 20:45:46 | INFO     |   [DIAG] Maestro    fila 3 | original=('Planeacion financiera', 'Ingresos Netos (MM)') | normalizado=('planeacion financiera', 'ingresos netos (mm)')
+2026-04-10 20:45:46 | INFO     |   [DIAG] Maestro    fila 4 | original=('Planeacion financiera', 'Ingresos Netos (MM)') | normalizado=('planeacion financiera', 'ingresos netos (mm)')
+2026-04-10 20:45:46 | WARNING  |   [AMBIGUO-MULTI] ('analisis cuantitativo', 'performance man') tiene 14 coincidencias en el maestro.
+2026-04-10 20:45:46 | WARNING  |   [AMBIGUO-MULTI] ('analisis cuantitativo', 'performance inv') tiene 14 coincidencias en el maestro.
+2026-04-10 20:45:46 | DEBUG    |   [NO ENCONTRADO] ('analisis cuantitativo', 'performance mav') en 'INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx'
+2026-04-10 20:45:46 | DEBUG    |   [NO ENCONTRADO] ("ℹ celdas en azul claro = campos fijos. solo complete la columna 'ejecucion *'. este archivo tiene 3 indicadores del equipo 'analisis cuantitativo'. la meta se gestiona en el archivo anual de metas — no se ingresa aqui.", '') en 'INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx'
+2026-04-10 20:45:46 | INFO     |   Cruce 'INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx': matches=0 | no_encontrados=2 | ambiguos=2
+2026-04-10 20:45:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:45:46 | INFO     | PASO 5: Guardando maestro actualizado...
+2026-04-10 20:45:46 | INFO     |   → Maestro actualizado guardado en: C:\Users\lvarg\OneDrive\Escritorio\Maestro_actualizado.xlsx
+2026-04-10 20:45:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:45:46 | INFO     | RESUMEN FINAL:
+2026-04-10 20:45:46 | INFO     |   Archivos procesados  : 1
+2026-04-10 20:45:46 | INFO     |   Registros actualizados: 0
+2026-04-10 20:45:46 | INFO     |   No encontrados       : 2
+2026-04-10 20:45:46 | INFO     |   Ambiguos             : 2
+2026-04-10 20:45:46 | INFO     |   Dup. en maestro      : 1230
+2026-04-10 20:45:46 | INFO     |   Dup. en individuales : 0
+2026-04-10 20:45:46 | INFO     |   Errores de fecha     : 0
+2026-04-10 20:45:46 | INFO     |   Errores generales    : 0
+2026-04-10 20:45:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:45:46 | INFO     | PASO 6: Generando reporte final...
+2026-04-10 20:45:46 | INFO     | Reporte generado: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\reports\Reporte_Indicadores_20260410_204546.xlsx
+2026-04-10 20:45:46 | INFO     |   → Reporte disponible en: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\reports\Reporte_Indicadores_20260410_204546.xlsx
+2026-04-10 20:45:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-10 20:45:46 | INFO     | Proceso finalizado.
