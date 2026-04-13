@@ -1,0 +1,246 @@
+2026-04-12 13:36:46 | INFO     | Logger iniciado. Archivo de log: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\logs\proceso_20260412_133646.log
+2026-04-12 13:36:46 | INFO     | Rutas seleccionadas:
+2026-04-12 13:36:46 | INFO     |   Maestro        : C:\Users\lvarg\OneDrive\Escritorio\Proyecto\Maestro.xlsx
+2026-04-12 13:36:46 | INFO     |   Individuales   : C:\Users\lvarg\OneDrive\Escritorio\Proyecto\Indicadores
+2026-04-12 13:36:46 | INFO     |   Salida         : C:\Users\lvarg\OneDrive\Escritorio\Maestro_actualizado.xlsx
+2026-04-12 13:36:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-12 13:36:46 | INFO     | PASO 1: Cargando el maestro...
+2026-04-12 13:36:46 | INFO     | Leyendo maestro: Maestro.xlsx
+2026-04-12 13:36:46 | INFO     |   → 1231 registros cargados del maestro.
+2026-04-12 13:36:46 | INFO     |   → Maestro validado correctamente.
+2026-04-12 13:36:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-12 13:36:46 | INFO     | PASO 2: Creando backup del maestro...
+2026-04-12 13:36:46 | INFO     |   → Backup creado: Maestro_backup_20260412_133646.xlsx
+2026-04-12 13:36:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-12 13:36:46 | INFO     | PASO 3: Buscando archivos individuales...
+2026-04-12 13:36:46 | INFO     |   → 2 archivo(s) encontrado(s).
+2026-04-12 13:36:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-12 13:36:46 | INFO     | PASO 4: Procesando archivos individuales...
+2026-04-12 13:36:46 | INFO     | 
+  Procesando: INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx
+2026-04-12 13:36:46 | INFO     |   [DIAG] Hojas en el archivo: ['Instrucciones', '📊 Ejecución Mensual', '📚 Mis Indicadores']
+2026-04-12 13:36:46 | INFO     |     [Instrucciones] A1: 'PLANTILLA MENSUAL DE EJECUCIÓN — ANALISIS CUANTITATIVO' (str)
+2026-04-12 13:36:46 | INFO     |     [Instrucciones] A2: 'Período: 03/2026  ·  3 indicadores  ·  Solo diligencie la columna EJECUCIÓN' (str)
+2026-04-12 13:36:46 | INFO     |     [Instrucciones] A4: '¿QUÉ DEBE HACER?' (str)
+2026-04-12 13:36:46 | INFO     |     [Instrucciones] A5: "1. Vaya a la pestaña '📊 Ejecución Mensual' en la parte inferior." (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] A1: 'EJECUCIÓN DE INDICADORES — ANALISIS CUANTITATIVO — 04/2026' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] A2: 'Equipo:' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] B2: 'Analisis cuantitativo' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] C2: 'Período:' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] D2: 202604 (int)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] E2: 'Responsable:' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] F2: 'Luis vargas' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] G2: 'Fecha de diligenciamiento:' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] H2: datetime.datetime(2026, 4, 10, 0, 0) (datetime)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] A4: 'Equipo' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] B4: 'Período' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] C4: 'Indicador' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] D4: 'Unidad' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] E4: 'Periodicidad' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] F4: 'Ejecución *' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] A5: 'Analisis cuantitativo' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] B5: 202604 (int)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] C5: 'Performance MAN' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] D5: '% Porcentaje' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] E5: 'Mensual' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] F5: 1 (int)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] A1: 'Lista de indicadores — Analisis cuantitativo  (3 indicadores)' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] A2: 'Indicador' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] B2: 'Unidad' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] C2: 'Periodicidad' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] A3: 'Performance MAN' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] B3: '% Porcentaje' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] C3: 'Mensual' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] A4: 'Performance INV' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] B4: '% Porcentaje' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] C4: 'Mensual' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] A5: 'Performance MAV' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] B5: '% Porcentaje' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] C5: 'Mensual' (str)
+2026-04-12 13:36:46 | INFO     |   [FECHA] Leyendo H2 desde hoja de datos: '📊 Ejecución Mensual'
+2026-04-12 13:36:46 | INFO     |   [FECHA] Leída desde H2: 2026-04-10
+2026-04-12 13:36:46 | INFO     |   Fecha: 2026-04-10 | Periodo ejecucion: 202604
+2026-04-12 13:36:46 | DEBUG    | Leyendo datos de individual: INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx
+2026-04-12 13:36:46 | INFO     |   [HOJA] 'Instrucciones' → score=0 (fila candidata: 1)
+2026-04-12 13:36:46 | INFO     |   [HOJA] '📊 Ejecución Mensual' → score=3 (fila candidata: 4)
+2026-04-12 13:36:46 | INFO     |   [HOJA] '📚 Mis Indicadores' → score=1 (fila candidata: 2)
+2026-04-12 13:36:46 | INFO     |   [HOJA] Seleccionada: '📊 Ejecución Mensual' | Encabezado en fila 4 | Score=3
+2026-04-12 13:36:46 | INFO     |   [COLUMNA] Renombrada: 'Ejecución *' → 'Ejecucion'
+2026-04-12 13:36:46 | INFO     |   → 1 fila(s) descartada(s) por tener columnas clave vacías (filas de notas o instrucciones).
+2026-04-12 13:36:46 | INFO     |   Columnas encontradas: ['Equipo', 'Período', 'Indicador', 'Unidad', 'Periodicidad', 'Ejecucion']
+2026-04-12 13:36:46 | INFO     |   → 3 registros leídos.
+2026-04-12 13:36:46 | INFO     |   Maestro filtrado a Periodo_YYYYMM=202604: 0 filas.
+2026-04-12 13:36:46 | ERROR    |   [SIN DATOS] El maestro no tiene ninguna fila con Periodo_YYYYMM=202604. Períodos disponibles en el maestro: [202201, 202202, 202203, 202204, 202205, 202206, 202207, 202208, 202209, 202210, 202211, 202212, 202301, 202302, 202303, 202304, 202305, 202306, 202307, 202308, 202309, 202310, 202311, 202312, 202401, 202402, 202403, 202404, 202405, 202406, 202407, 202408, 202409, 202410, 202411, 202412, 202501, 202502, 202503, 202504, 202505, 202506, 202507, 202508, 202509, 202510, 202511, 202512, 202601, 202602, 202603]
+2026-04-12 13:36:46 | INFO     |   [DIAG] Columnas del individual: ['Equipo', 'Período', 'Indicador', 'Unidad', 'Periodicidad', 'Ejecucion']
+2026-04-12 13:36:46 | INFO     |   [DIAG] Filas en individual: 3
+2026-04-12 13:36:46 | INFO     |   [DIAG] Filas en maestro: 0
+2026-04-12 13:36:46 | INFO     |   [DIAG] Individual fila 2 | original=('Analisis cuantitativo', 'Performance MAN') | normalizado=('analisis cuantitativo', 'performance man')
+2026-04-12 13:36:46 | INFO     |   [DIAG] Individual fila 3 | original=('Analisis cuantitativo', 'Performance INV') | normalizado=('analisis cuantitativo', 'performance inv')
+2026-04-12 13:36:46 | INFO     |   [DIAG] Individual fila 4 | original=('Analisis cuantitativo', 'Performance MAV') | normalizado=('analisis cuantitativo', 'performance mav')
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('analisis cuantitativo', 'performance man') en 'INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx'
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('analisis cuantitativo', 'performance inv') en 'INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx'
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('analisis cuantitativo', 'performance mav') en 'INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx'
+2026-04-12 13:36:46 | INFO     |   Cruce 'INDICADORES_ANALISIS_CUANTITATIVO_202603.xlsx': matches=0 | no_encontrados=3 | ambiguos=0
+2026-04-12 13:36:46 | INFO     |   INSERT_NEW_RECORDS=True: intentando insertar 3 fila(s) no encontrada(s)...
+2026-04-12 13:36:46 | INFO     |   [INSERT] Analisis cuantitativo | Performance MAN | Periodo=202604 | Ejecucion=1.0
+2026-04-12 13:36:46 | INFO     |   [INSERT] Analisis cuantitativo | Performance INV | Periodo=202604 | Ejecucion=2.0
+2026-04-12 13:36:46 | WARNING  |   [INSERT] No hay plantilla para Analisis cuantitativo | Performance MAV. Se creará fila mínima.
+2026-04-12 13:36:46 | INFO     |   [INSERT] Analisis cuantitativo | Performance MAV | Periodo=202604 | Ejecucion=3.0
+2026-04-12 13:36:46 | INFO     |   → 3 fila(s) insertada(s) en el maestro.
+2026-04-12 13:36:46 | INFO     | 
+  Procesando: INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx
+2026-04-12 13:36:46 | INFO     |   [DIAG] Hojas en el archivo: ['Instrucciones', '📊 Ejecución Mensual', '📚 Mis Indicadores']
+2026-04-12 13:36:46 | INFO     |     [Instrucciones] A1: 'PLANTILLA MENSUAL DE EJECUCIÓN — CANALES Y SERVICIOS' (str)
+2026-04-12 13:36:46 | INFO     |     [Instrucciones] A2: 'Período: 03/2026  ·  9 indicadores  ·  Solo diligencie la columna EJECUCIÓN' (str)
+2026-04-12 13:36:46 | INFO     |     [Instrucciones] A4: '¿QUÉ DEBE HACER?' (str)
+2026-04-12 13:36:46 | INFO     |     [Instrucciones] A5: "1. Vaya a la pestaña '📊 Ejecución Mensual' en la parte inferior." (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] A1: 'EJECUCIÓN DE INDICADORES — CANALES Y SERVICIOS — 03/2026' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] A2: 'Equipo:' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] B2: 'Canales y Servicios' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] C2: 'Período:' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] D2: 202604 (int)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] E2: 'Responsable:' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] G2: 'Fecha de diligenciamiento:' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] H2: datetime.datetime(2026, 4, 10, 0, 0) (datetime)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] A4: 'Equipo' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] B4: 'Período' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] C4: 'Indicador' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] D4: 'Unidad' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] E4: 'Periodicidad' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] F4: 'Ejecución *' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] A5: 'Canales y Servicios' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] B5: 202604 (int)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] C5: 'Costo transaccion' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] D5: '$ Moneda' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] E5: 'Mensual' (str)
+2026-04-12 13:36:46 | INFO     |     [📊 Ejecución Mensual] F5: 20 (int)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] A1: 'Lista de indicadores — Canales y Servicios  (9 indicadores)' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] A2: 'Indicador' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] B2: 'Unidad' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] C2: 'Periodicidad' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] A3: 'Costo transaccion' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] B3: '$ Moneda' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] C3: 'Mensual' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] A4: 'Solucion 1 contacto' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] B4: '% Porcentaje' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] C4: 'Mensual' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] A5: 'Ventas ODS' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] B5: '$ Moneda' (str)
+2026-04-12 13:36:46 | INFO     |     [📚 Mis Indicadores] C5: 'Mensual' (str)
+2026-04-12 13:36:46 | INFO     |   [FECHA] Leyendo H2 desde hoja de datos: '📊 Ejecución Mensual'
+2026-04-12 13:36:46 | INFO     |   [FECHA] Leída desde H2: 2026-04-10
+2026-04-12 13:36:46 | INFO     |   Fecha: 2026-04-10 | Periodo ejecucion: 202604
+2026-04-12 13:36:46 | DEBUG    | Leyendo datos de individual: INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx
+2026-04-12 13:36:46 | INFO     |   [HOJA] 'Instrucciones' → score=0 (fila candidata: 1)
+2026-04-12 13:36:46 | INFO     |   [HOJA] '📊 Ejecución Mensual' → score=3 (fila candidata: 4)
+2026-04-12 13:36:46 | INFO     |   [HOJA] '📚 Mis Indicadores' → score=1 (fila candidata: 2)
+2026-04-12 13:36:46 | INFO     |   [HOJA] Seleccionada: '📊 Ejecución Mensual' | Encabezado en fila 4 | Score=3
+2026-04-12 13:36:46 | INFO     |   [COLUMNA] Renombrada: 'Ejecución *' → 'Ejecucion'
+2026-04-12 13:36:46 | INFO     |   → 1 fila(s) descartada(s) por tener columnas clave vacías (filas de notas o instrucciones).
+2026-04-12 13:36:46 | INFO     |   Columnas encontradas: ['Equipo', 'Período', 'Indicador', 'Unidad', 'Periodicidad', 'Ejecucion']
+2026-04-12 13:36:46 | INFO     |   → 9 registros leídos.
+2026-04-12 13:36:46 | INFO     |   Maestro filtrado a Periodo_YYYYMM=202604: 3 filas.
+2026-04-12 13:36:46 | INFO     |   Equipos en maestro (período 202604): ['Analisis cuantitativo']
+2026-04-12 13:36:46 | INFO     |   Equipos en individual: ['Canales y Servicios']
+2026-04-12 13:36:46 | INFO     |   [DIAG] Columnas del individual: ['Equipo', 'Período', 'Indicador', 'Unidad', 'Periodicidad', 'Ejecucion']
+2026-04-12 13:36:46 | INFO     |   [DIAG] Filas en individual: 9
+2026-04-12 13:36:46 | INFO     |   [DIAG] Filas en maestro: 3
+2026-04-12 13:36:46 | INFO     |   [DIAG] Individual fila 2 | original=('Canales y Servicios', 'Costo transaccion') | normalizado=('canales y servicios', 'costo transaccion')
+2026-04-12 13:36:46 | INFO     |   [DIAG] Individual fila 3 | original=('Canales y Servicios', 'Solucion 1 contacto') | normalizado=('canales y servicios', 'solucion 1 contacto')
+2026-04-12 13:36:46 | INFO     |   [DIAG] Individual fila 4 | original=('Canales y Servicios', 'Ventas ODS') | normalizado=('canales y servicios', 'ventas ods')
+2026-04-12 13:36:46 | INFO     |   [DIAG] Maestro    fila 2 | original=('Analisis cuantitativo', 'Performance MAN') | normalizado=('analisis cuantitativo', 'performance man')
+2026-04-12 13:36:46 | INFO     |   [DIAG] Maestro    fila 3 | original=('Analisis cuantitativo', 'Performance INV') | normalizado=('analisis cuantitativo', 'performance inv')
+2026-04-12 13:36:46 | INFO     |   [DIAG] Maestro    fila 4 | original=('Analisis cuantitativo', 'Performance MAV') | normalizado=('analisis cuantitativo', 'performance mav')
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('canales y servicios', 'costo transaccion') en 'INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx'
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('canales y servicios', 'solucion 1 contacto') en 'INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx'
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('canales y servicios', 'ventas ods') en 'INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx'
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('canales y servicios', 'satisfaccion') en 'INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx'
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('canales y servicios', 'solucion pqr') en 'INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx'
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('canales y servicios', 'satisfaccion ayr') en 'INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx'
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('canales y servicios', 'solucion ge') en 'INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx'
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('canales y servicios', 'satisfaccion igp') en 'INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx'
+2026-04-12 13:36:46 | DEBUG    |   [NO ENCONTRADO] ('canales y servicios', 'solucion igp') en 'INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx'
+2026-04-12 13:36:46 | INFO     |   Cruce 'INDICADORES_CANALES_Y_SERVICIOS_202603.xlsx': matches=0 | no_encontrados=9 | ambiguos=0
+2026-04-12 13:36:46 | INFO     |   INSERT_NEW_RECORDS=True: intentando insertar 9 fila(s) no encontrada(s)...
+2026-04-12 13:36:46 | INFO     |   [INSERT] Canales y Servicios | Costo transaccion | Periodo=202604 | Ejecucion=20.0
+2026-04-12 13:36:46 | INFO     |   [INSERT] Canales y Servicios | Solucion 1 contacto | Periodo=202604 | Ejecucion=30.0
+2026-04-12 13:36:46 | INFO     |   [INSERT] Canales y Servicios | Ventas ODS | Periodo=202604 | Ejecucion=40.0
+2026-04-12 13:36:46 | INFO     |   [INSERT] Canales y Servicios | Satisfaccion | Periodo=202604 | Ejecucion=50.0
+2026-04-12 13:36:46 | INFO     |   [INSERT] Canales y Servicios | Solucion PQR | Periodo=202604 | Ejecucion=60.0
+2026-04-12 13:36:46 | INFO     |   [INSERT] Canales y Servicios | Satisfaccion AYR | Periodo=202604 | Ejecucion=70.0
+2026-04-12 13:36:46 | INFO     |   [INSERT] Canales y Servicios | Solucion GE | Periodo=202604 | Ejecucion=80.0
+2026-04-12 13:36:46 | INFO     |   [INSERT] Canales y Servicios | Satisfaccion IGP | Periodo=202604 | Ejecucion=98.0
+2026-04-12 13:36:46 | INFO     |   [INSERT] Canales y Servicios | Solucion IGP | Periodo=202604 | Ejecucion=100.0
+2026-04-12 13:36:46 | INFO     |   → 9 fila(s) insertada(s) en el maestro.
+2026-04-12 13:36:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-12 13:36:46 | INFO     | PASO 5: Guardando maestro actualizado...
+2026-04-12 13:36:46 | ERROR    |   [ERROR GUARDADO] No se pudo guardar el maestro: [Errno 13] Permission denied: 'C:\\Users\\lvarg\\OneDrive\\Escritorio\\Maestro_actualizado.xlsx'
+2026-04-12 13:36:46 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-12 13:36:46 | INFO     | PASO 6: Cargando metas anuales...
+2026-04-12 13:36:54 | INFO     |   → 1 archivo(s) de metas encontrado(s).
+2026-04-12 13:36:54 | INFO     | 
+  Procesando metas: METAS_ANALISIS_CUANTITATIVO_2026.xlsx
+2026-04-12 13:36:54 | INFO     |   [METAS] Leyendo hoja '🎯 Metas Anuales' de 'METAS_ANALISIS_CUANTITATIVO_2026.xlsx' (encabezado en fila 4)
+2026-04-12 13:36:54 | INFO     |   [METAS] Columna 'Equipo' no encontrada. Se usará el nombre extraído del archivo: 'ANALISIS CUANTITATIVO'
+2026-04-12 13:36:54 | INFO     |   [METAS] Columnas de mes detectadas: {1: 'Meta\nEnero *', 2: 'Meta\nFebrero *', 3: 'Meta\nMarzo *', 4: 'Meta\nAbril *', 5: 'Meta\nMayo *', 6: 'Meta\nJunio *', 7: 'Meta\nJulio *', 8: 'Meta\nAgosto *', 9: 'Meta\nSeptiembre *', 10: 'Meta\nOctubre *', 11: 'Meta\nNoviembre *', 12: 'Meta\nDiciembre *'}
+2026-04-12 13:36:54 | DEBUG    |   [METAS] Fila descartada (indicador muy largo, posible nota): 'ℹ️  Celdas en azul claro = fijas (no modificar). Complete la...'
+2026-04-12 13:36:54 | INFO     |   [METAS] 3 indicador(es) leído(s) de 'METAS_ANALISIS_CUANTITATIVO_2026.xlsx' (año=2026)
+2026-04-12 13:36:54 | INFO     |   Estado metas en maestro — ANALISIS CUANTITATIVO | Año=2026: VACIO
+2026-04-12 13:36:54 | INFO     |   [METAS] Columna 'Meta_Periodo' creada en el maestro.
+2026-04-12 13:36:54 | INFO     |   [META] ANALISIS CUANTITATIVO | Performance MAN | Año=2026 Mes=1 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META] ANALISIS CUANTITATIVO | Performance MAN | Año=2026 Mes=2 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META] ANALISIS CUANTITATIVO | Performance MAN | Año=2026 Mes=4 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAN | Periodo=202603 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAN | Periodo=202605 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAN | Periodo=202606 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAN | Periodo=202607 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAN | Periodo=202608 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAN | Periodo=202609 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAN | Periodo=202610 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAN | Periodo=202611 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAN | Periodo=202612 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META] ANALISIS CUANTITATIVO | Performance INV | Año=2026 Mes=1 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META] ANALISIS CUANTITATIVO | Performance INV | Año=2026 Mes=2 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META] ANALISIS CUANTITATIVO | Performance INV | Año=2026 Mes=4 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance INV | Periodo=202603 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance INV | Periodo=202605 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance INV | Periodo=202606 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance INV | Periodo=202607 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance INV | Periodo=202608 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance INV | Periodo=202609 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance INV | Periodo=202610 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance INV | Periodo=202611 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance INV | Periodo=202612 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META] ANALISIS CUANTITATIVO | Performance MAV | Año=2026 Mes=4 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAV | Periodo=202601 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAV | Periodo=202602 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAV | Periodo=202603 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAV | Periodo=202605 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAV | Periodo=202606 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAV | Periodo=202607 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAV | Periodo=202608 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAV | Periodo=202609 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAV | Periodo=202610 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAV | Periodo=202611 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   [META-NEW] ANALISIS CUANTITATIVO | Performance MAV | Periodo=202612 | Meta_Periodo=20.0
+2026-04-12 13:36:54 | INFO     |   → 29 fila(s) de período creada(s) desde metas.
+2026-04-12 13:36:54 | ERROR    |   [ERROR GUARDADO METAS] No se pudo guardar: [Errno 13] Permission denied: 'C:\\Users\\lvarg\\OneDrive\\Escritorio\\Maestro_actualizado.xlsx'
+2026-04-12 13:36:54 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-12 13:36:54 | INFO     | RESUMEN FINAL:
+2026-04-12 13:36:54 | INFO     |   Archivos procesados  : 2
+2026-04-12 13:36:54 | INFO     |   Registros actualizados: 12
+2026-04-12 13:36:54 | INFO     |   No encontrados       : 0
+2026-04-12 13:36:54 | INFO     |   Ambiguos             : 0
+2026-04-12 13:36:54 | INFO     |   Dup. en maestro      : 0
+2026-04-12 13:36:54 | INFO     |   Dup. en individuales : 0
+2026-04-12 13:36:54 | INFO     |   Errores de fecha     : 0
+2026-04-12 13:36:54 | INFO     |   Errores generales    : 2
+2026-04-12 13:36:54 | INFO     |   Metas aplicadas      : 7
+2026-04-12 13:36:54 | INFO     |   Metas omitidas       : 0
+2026-04-12 13:36:54 | INFO     |   Metas sin fila       : 0
+2026-04-12 13:36:54 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-12 13:36:54 | INFO     | PASO 8: Generando reporte final...
+2026-04-12 13:36:54 | INFO     | Reporte generado: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\reports\Reporte_Indicadores_20260412_133654.xlsx
+2026-04-12 13:36:54 | INFO     |   → Reporte disponible en: c:\Users\lvarg\OneDrive\Escritorio\Proyecto\proyecto_indicadores\reports\Reporte_Indicadores_20260412_133654.xlsx
+2026-04-12 13:36:54 | INFO     | ────────────────────────────────────────────────────────────
+2026-04-12 13:36:54 | INFO     | Proceso finalizado.

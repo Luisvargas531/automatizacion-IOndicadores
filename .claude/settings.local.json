@@ -9,7 +9,8 @@
       "Bash(python -m py_compile excel_reader.py main.py matcher.py)",
       "Bash(python -m py_compile excel_reader.py main.py)",
       "Bash(python -m py_compile main.py)",
-      "Bash(python -m py_compile updater.py main.py)"
+      "Bash(python -m py_compile updater.py main.py)",
+      "Bash(python -c ':*)"
     ]
   }
 }

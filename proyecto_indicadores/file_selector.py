@@ -166,6 +166,35 @@ def confirm_dry_run() -> bool:
     return respuesta
 
 
+def select_metas_folder(default_path: "Path | None" = None) -> "Path | None":
+    """
+    Abre un diálogo para seleccionar la carpeta con los archivos de metas.
+    Si el usuario cancela, retorna None (la carga de metas se omite).
+
+    Parámetros
+    ----------
+    default_path : Path | None
+        Carpeta inicial del diálogo.
+
+    Retorna
+    -------
+    Path | None  Carpeta seleccionada, o None si se cancela.
+    """
+    root = _make_root()
+
+    initial_dir = str(default_path) if default_path and default_path.exists() else "/"
+
+    folder_str = filedialog.askdirectory(
+        parent=root,
+        title="Selecciona la carpeta con los archivos de METAS (cancela para omitir)",
+        initialdir=initial_dir,
+        mustexist=True,
+    )
+    root.destroy()
+
+    return Path(folder_str) if folder_str else None
+
+
 def _cancelado(nombre: str):
     """Muestra mensaje de cancelación y termina el programa."""
     root = _make_root()

@@ -12,6 +12,11 @@ Hojas del reporte:
   6. Duplicados_Individual→ llaves duplicadas detectadas en los individuales
   7. Errores_Fecha        → archivos donde H2 no se pudo leer como fecha
   8. Errores_Generales    → cualquier otro error durante el proceso
+  9. Metas_Aplicadas      → metas escritas en filas existentes (o simuladas)
+  10. Metas_Omitidas      → metas no escritas porque ya existía valor
+  11. Metas_Sin_Fila      → indicadores en el archivo de metas sin fila en maestro
+  12. Metas_Resumen       → estado COMPLETO/PARCIAL/VACIO por Equipo+Año
+  13. Periodos_Creados    → filas de período creadas automáticamente al cargar metas
 ─────────────────────────────────────────────────────────────────────────────
 """
 
@@ -56,6 +61,23 @@ class ReportCollector:
     # Errores generales (columnas faltantes, archivos inaccesibles, etc.)
     errores_generales: list = field(default_factory=list)
 
+    # ── Metas ────────────────────────────────────────────────────────────────
+
+    # Metas escritas en filas existentes (accion = META_APLICADA | META_SIMULADA)
+    metas_aplicadas: list = field(default_factory=list)
+
+    # Metas no escritas por overwrite_metas=False (accion = OMITIDO)
+    metas_omitidas: list = field(default_factory=list)
+
+    # Indicadores del archivo de metas sin fila en el maestro (accion = SIN_FILA)
+    metas_sin_fila: list = field(default_factory=list)
+
+    # Filas de período creadas automáticamente al cargar metas (accion = PERIODO_CREADO | PERIODO_SIMULADO)
+    metas_periodos_creados: list = field(default_factory=list)
+
+    # Resumen de estado por Equipo+Año: [{Equipo, Anio, estado_previo, estado_final, archivo}]
+    metas_resumen: list = field(default_factory=list)
+
     def add_archivo_procesado(
         self,
         filename: str,
@@ -79,6 +101,29 @@ class ReportCollector:
 
     def add_error_general(self, filename: str, detalle: str):
         self.errores_generales.append({"archivo": filename, "detalle": detalle})
+
+    def add_meta_log(self, meta_log: list[dict]):
+        """Clasifica los registros del meta_log en las listas correspondientes."""
+        for entry in meta_log:
+            accion = entry.get("accion", "")
+            if accion in ("META_APLICADA", "META_SIMULADA"):
+                self.metas_aplicadas.append(entry)
+            elif accion in ("PERIODO_CREADO", "PERIODO_SIMULADO"):
+                self.metas_periodos_creados.append(entry)
+            elif accion == "OMITIDO":
+                self.metas_omitidas.append(entry)
+            elif accion == "SIN_FILA":
+                self.metas_sin_fila.append(entry)
+
+    def add_meta_resumen(self, equipo: str, anio: int, estado_previo: str,
+                         estado_final: str, archivo: str):
+        self.metas_resumen.append({
+            "Equipo":        equipo,
+            "Anio":          anio,
+            "estado_previo": estado_previo,
+            "estado_final":  estado_final,
+            "archivo":       archivo,
+        })
 
 
 def generate_report(collector: ReportCollector, reports_folder: Path, dry_run: bool = False) -> Path:
@@ -157,6 +202,37 @@ def generate_report(collector: ReportCollector, reports_folder: Path, dry_run: b
         columns=["archivo", "detalle"]
     )
 
+    # ── Hojas de Metas ───────────────────────────────────────────────────
+
+    # Hoja 9: Metas Aplicadas
+    df_metas_apl = pd.DataFrame(collector.metas_aplicadas) if collector.metas_aplicadas else pd.DataFrame(
+        columns=["accion", "archivo", "Equipo", "Indicador", "Anio", "Mes",
+                 "maestro_fila", "Meta_Anual_nueva", "Meta_Anual_nueva",
+                 "Periodicidad", "simulado"]
+    )
+
+    # Hoja 10: Metas Omitidas
+    df_metas_omit = pd.DataFrame(collector.metas_omitidas) if collector.metas_omitidas else pd.DataFrame(
+        columns=["accion", "archivo", "Equipo", "Indicador", "Anio", "Mes",
+                 "maestro_fila", "Meta_Anual_nueva", "Meta_Anual_nueva", "nota", "simulado"]
+    )
+
+    # Hoja 11: Metas Sin Fila
+    df_metas_sf = pd.DataFrame(collector.metas_sin_fila) if collector.metas_sin_fila else pd.DataFrame(
+        columns=["accion", "archivo", "Equipo", "Indicador", "Anio", "nota", "simulado"]
+    )
+
+    # Hoja 12: Metas Resumen
+    df_metas_res = pd.DataFrame(collector.metas_resumen) if collector.metas_resumen else pd.DataFrame(
+        columns=["Equipo", "Anio", "estado_previo", "estado_final", "archivo"]
+    )
+
+    # Hoja 13: Periodos Creados desde metas
+    df_metas_pc = pd.DataFrame(collector.metas_periodos_creados) if collector.metas_periodos_creados else pd.DataFrame(
+        columns=["accion", "archivo", "Equipo", "Indicador", "Anio", "Mes",
+                 "Periodo_YYYYMM", "Meta_Anual_nueva", "nota", "simulado"]
+    )
+
     # ── Escribir Excel ───────────────────────────────────────────────────
     with pd.ExcelWriter(report_path, engine="openpyxl") as writer:
         _write_sheet(writer, df_resumen, "Resumen")
@@ -167,6 +243,11 @@ def generate_report(collector: ReportCollector, reports_folder: Path, dry_run: b
         _write_sheet(writer, df_dup_ind, "Duplicados_Individual")
         _write_sheet(writer, df_err_fecha, "Errores_Fecha")
         _write_sheet(writer, df_err_gen, "Errores_Generales")
+        _write_sheet(writer, df_metas_apl, "Metas_Aplicadas")
+        _write_sheet(writer, df_metas_omit, "Metas_Omitidas")
+        _write_sheet(writer, df_metas_sf, "Metas_Sin_Fila")
+        _write_sheet(writer, df_metas_res, "Metas_Resumen")
+        _write_sheet(writer, df_metas_pc, "Periodos_Creados")
 
     logger.info(f"Reporte generado: {report_path}")
     return report_path

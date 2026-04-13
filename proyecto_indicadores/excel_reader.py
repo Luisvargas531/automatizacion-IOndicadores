@@ -461,6 +461,20 @@ def read_individual_data(path: Path) -> pd.DataFrame:
     # Normalizar nombres de columnas (ej: "Ejecución *" → "Ejecucion")
     df = _normalize_column_names(df, INDIVIDUAL_REQUIRED_COLS)
 
+    # Eliminar filas donde faltan columnas clave (Equipo, Indicador o Ejecucion).
+    # Esto filtra filas de notas/instrucciones que tienen texto solo en una columna.
+    key_cols_present = [c for c in ("Equipo", "Indicador", "Ejecucion") if c in df.columns]
+    if key_cols_present:
+        mask_validas = df[key_cols_present].notna().all(axis=1)
+        n_antes = len(df)
+        df = df[mask_validas].reset_index(drop=True)
+        n_filtradas = n_antes - len(df)
+        if n_filtradas > 0:
+            logger.info(
+                f"  → {n_filtradas} fila(s) descartada(s) por tener "
+                f"columnas clave vacías (filas de notas o instrucciones)."
+            )
+
     if df.empty:
         raise ValueError(f"El archivo individual está vacío: {path.name}")
 

@@ -93,3 +93,26 @@ INDIVIDUAL_SHEET = None
 # Fila donde empieza el encabezado de la tabla en los archivos individuales
 # 0 = primera fila (comportamiento por defecto de pandas)
 INDIVIDUAL_HEADER_ROW = 0
+
+# ─────────────────────────────────────────────
+# CARGA DE METAS
+# ─────────────────────────────────────────────
+
+# Carpeta donde están los archivos de metas anuales por equipo
+# Patrón esperado: METAS_<EQUIPO>_<ANIO>.xlsx  (ej. METAS_ANALISIS_CUANTITATIVO_2026.xlsx)
+METAS_FOLDER = BASE_DIR / "data" / "metas"
+
+# Patrón glob para detectar archivos de metas dentro de METAS_FOLDER
+METAS_FILE_PATTERN = "METAS_*.xlsx"
+
+# Nombre (o substring) de la hoja de metas dentro de cada archivo
+METAS_SHEET = "🎯 Metas Anuales"
+
+# OVERWRITE_METAS = False → si la celda ya tiene meta, NO se sobreescribe
+# OVERWRITE_METAS = True  → sobreescribe aunque ya tenga valor
+OVERWRITE_METAS = False
+
+# Cómo se distribuye la meta en indicadores con Periodicidad = "Anual":
+#   "replicate"          → Meta_Periodo = Meta_Anual en TODOS los meses del año
+#   "closing_month_only" → Meta_Periodo = Meta_Anual SOLO en diciembre (mes 12)
+ANNUAL_GOAL_MODE = "replicate"

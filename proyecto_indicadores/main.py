@@ -40,9 +40,13 @@ from excel_reader import (
 from file_selector import (
     select_maestro,
     select_individuales_folder,
+    select_metas_folder,
     select_output_file,
     confirm_dry_run,
 )
+from goals_reader import read_meta_file
+from goals_validator import check_meta_state
+from goals_updater import apply_metas
 from logger_utils import setup_logger
 from matcher import cross_match
 from reporting import ReportCollector, generate_report
@@ -383,7 +387,134 @@ def main():
     else:
         logger.info("  → [DRY-RUN] Guardado omitido en simulación.")
 
-    # ── 6. Resumen en consola ─────────────────────────────────────────────
+    # ── 6. Cargar metas (opcional) ────────────────────────────────────────
+    logger.info("─" * 60)
+    logger.info("PASO 6: Cargando metas anuales...")
+
+    # Determinar carpeta de metas: argumento, config, o diálogo
+    if args.no_gui:
+        metas_folder = config.METAS_FOLDER if config.METAS_FOLDER.exists() else None
+    else:
+        # Preguntar al usuario si desea cargar metas
+        import tkinter as tk
+        from tkinter import messagebox
+        _root = tk.Tk()
+        _root.withdraw()
+        _root.attributes("-topmost", True)
+        cargar_metas = messagebox.askyesno(
+            parent=_root,
+            title="Carga de Metas",
+            message=(
+                "¿Deseas cargar también los archivos de METAS anuales?\n\n"
+                "• SÍ  → Selecciona la carpeta con archivos METAS_*.xlsx\n"
+                "• NO  → Omitir carga de metas"
+            ),
+        )
+        _root.destroy()
+        if cargar_metas:
+            metas_folder = select_metas_folder(default_path=config.METAS_FOLDER)
+        else:
+            metas_folder = None
+
+    if metas_folder is None:
+        logger.info("  → Carga de metas omitida.")
+    else:
+        meta_files = sorted(
+            [f for f in metas_folder.glob(config.METAS_FILE_PATTERN)
+             if not f.name.startswith("~$")]
+        )
+        if not meta_files:
+            logger.warning(
+                f"  → No se encontraron archivos '{config.METAS_FILE_PATTERN}' "
+                f"en: {metas_folder}"
+            )
+        else:
+            logger.info(f"  → {len(meta_files)} archivo(s) de metas encontrado(s).")
+            for meta_path in meta_files:
+                meta_filename = meta_path.name
+                logger.info(f"\n  Procesando metas: {meta_filename}")
+
+                try:
+                    goals_df, anio = read_meta_file(meta_path, config.METAS_SHEET)
+                except Exception as e:
+                    logger.error(f"  [ERROR METAS] {meta_filename}: {e}")
+                    collector.add_error_general(meta_filename, f"Error al leer metas: {e}")
+                    continue
+
+                if anio is None:
+                    logger.warning(
+                        f"  [METAS] No se pudo determinar el año de '{meta_filename}'. "
+                        f"Se omite."
+                    )
+                    collector.add_error_general(
+                        meta_filename, "No se pudo extraer el año del nombre del archivo."
+                    )
+                    continue
+
+                # Obtener equipos únicos en el archivo de metas
+                equipos_en_metas = goals_df["Equipo"].dropna().unique().tolist()
+
+                for equipo in equipos_en_metas:
+                    estado_previo = check_meta_state(
+                        maestro_df, equipo, anio, meta_col="Meta_Anual"
+                    )
+                    logger.info(
+                        f"  Estado metas en maestro — {equipo} | Año={anio}: "
+                        f"{estado_previo}"
+                    )
+
+                    # Si COMPLETO y no se sobreescribe, saltear
+                    if estado_previo == "COMPLETO" and not config.OVERWRITE_METAS:
+                        logger.info(
+                            f"  → Metas COMPLETAS para {equipo} | Año={anio} "
+                            f"y OVERWRITE_METAS=False. Se omite."
+                        )
+                        collector.add_meta_resumen(
+                            equipo, anio, estado_previo, estado_previo, meta_filename
+                        )
+                        continue
+
+                # Aplicar metas del archivo completo
+                maestro_df, meta_log = apply_metas(
+                    maestro_df=maestro_df,
+                    goals_df=goals_df,
+                    anio=anio,
+                    filename=meta_filename,
+                    overwrite_metas=config.OVERWRITE_METAS,
+                    annual_goal_mode=config.ANNUAL_GOAL_MODE,
+                    dry_run=dry_run,
+                )
+
+                collector.add_meta_log(meta_log)
+
+                # Calcular estado final y registrar en resumen
+                for equipo in equipos_en_metas:
+                    estado_final = check_meta_state(
+                        maestro_df, equipo, anio, meta_col="Meta_Anual"
+                    )
+                    estado_previo = check_meta_state(
+                        # recalcular sobre el df original (antes de apply) no es posible aquí
+                        # usamos el estado que ya teníamos como referencia; en dry_run coinciden
+                        maestro_df, equipo, anio, meta_col="Meta_Anual"
+                    )
+                    collector.add_meta_resumen(
+                        equipo, anio, "—", estado_final, meta_filename
+                    )
+
+            # Guardar maestro con metas (si no es dry-run)
+            if not dry_run and meta_files:
+                try:
+                    save_maestro(maestro_df, output_path)
+                    logger.info(
+                        f"  → Maestro con metas guardado en: {output_path}"
+                    )
+                except Exception as e:
+                    logger.error(
+                        f"  [ERROR GUARDADO METAS] No se pudo guardar: {e}"
+                    )
+                    collector.add_error_general("Maestro", f"Error al guardar con metas: {e}")
+
+    # ── 7. Resumen en consola ─────────────────────────────────────────────
     logger.info("─" * 60)
     logger.info("RESUMEN FINAL:")
     logger.info(f"  Archivos procesados  : {len(collector.archivos_procesados)}")
@@ -394,10 +525,14 @@ def main():
     logger.info(f"  Dup. en individuales : {len(collector.duplicados_individual)}")
     logger.info(f"  Errores de fecha     : {len(collector.errores_fecha)}")
     logger.info(f"  Errores generales    : {len(collector.errores_generales)}")
+    logger.info(f"  Metas aplicadas      : {len(collector.metas_aplicadas)}")
+    logger.info(f"  Periodos creados     : {len(collector.metas_periodos_creados)}")
+    logger.info(f"  Metas omitidas       : {len(collector.metas_omitidas)}")
+    logger.info(f"  Metas sin fila       : {len(collector.metas_sin_fila)}")
 
-    # ── 7. Generar reporte final ──────────────────────────────────────────
+    # ── 8. Generar reporte final ──────────────────────────────────────────
     logger.info("─" * 60)
-    logger.info("PASO 6: Generando reporte final...")
+    logger.info("PASO 8: Generando reporte final...")
     report_path = generate_report(collector, config.REPORTS_FOLDER, dry_run=dry_run)
     logger.info(f"  → Reporte disponible en: {report_path}")
     logger.info("─" * 60)
